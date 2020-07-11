@@ -1,7 +1,6 @@
 src/serviceWorker.ts
 src/react-app-env.d.ts
-build
-node_modules
+node_modules/*
 .cache
-public
 src/components/theme.ts
+build/*
