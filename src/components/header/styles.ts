@@ -12,7 +12,7 @@ export const Styles = styled.header`
     max-width: 100%;
     overflow: auto;
     height: ${headerHeight}px;
-    overflow: hidden;
+    overflow-x: auto;
     color: white;
     transition: all 1s ease-in-out;
 
