@@ -1,2 +1,0 @@
-(this["webpackJsonpuppeabhishek-website"]=this["webpackJsonpuppeabhishek-website"]||[]).push([[6],{47:function(e,t,n){"use strict";n.r(t);var s=n(0),a=n.n(s),i=n(1);t.default=function(){var e=Object(i.g)().name;return a.a.createElement("div",null,e)}}}]);
-//# sourceMappingURL=6.314cfc55.chunk.js.map
