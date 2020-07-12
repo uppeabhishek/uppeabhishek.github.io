@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
+
 // @ts-ignore
-import Resume from '../../static/AbhishekUppeResume.pdf'
+import Resume from "../../static/AbhishekUppeResume.pdf";
 
 const ResumePage: FunctionComponent = () => (
     <>

@@ -3,8 +3,8 @@
  * redirects the unauthenticated user to login page
  */
 
-import React, { ExoticComponent } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import React, { ExoticComponent } from "react";
+import { Route } from "react-router-dom";
 
 interface PageProps {
     component: ExoticComponent;
@@ -13,8 +13,8 @@ interface PageProps {
 
 function AuthorisedRoute(props: PageProps) {
     const { component, path } = props;
-    return <Route exact path={path} component={component} />;
-}
 
+    return <Route component={component} exact={true} path={path} />;
+}
 
 export default AuthorisedRoute;

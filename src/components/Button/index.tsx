@@ -1,6 +1,12 @@
 import React, { FunctionComponent, ReactNode } from "react";
 import { Styles } from "./styles";
 
-export const Button: FunctionComponent<{ children: ReactNode }> = ({ children }) => (
-    <Styles type="button">{children}</Styles>
+interface ButtonType {
+    children: ReactNode;
+    [prop: string]: any;
+}
+export const Button: FunctionComponent<ButtonType> = ({ children, ...rest }) => (
+    <Styles type="button" {...rest}>
+        {children}
+    </Styles>
 );

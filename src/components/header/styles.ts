@@ -10,7 +10,6 @@ export const Styles = styled.header`
     top: 0;
     z-index: 10;
     max-width: 100%;
-    overflow: auto;
     height: ${headerHeight}px;
     overflow-x: auto;
     color: white;

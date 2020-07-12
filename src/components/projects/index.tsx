@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useRef, useState, useEffect } from "react";
+import React, { FunctionComponent, useRef, useState } from "react";
 import { Styles } from "./styles";
 import ProjectsArray from "./projectsarray";
 
@@ -17,6 +17,7 @@ const Projects: FunctionComponent = () => {
             <div className="filters d-flex">
                 {technologies.current.map((technology: string) => {
                     const className = technology === selected ? "active" : "";
+
                     return (
                         <div
                             key={technology}

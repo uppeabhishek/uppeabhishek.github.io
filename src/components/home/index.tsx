@@ -1,5 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Styles } from "./styles";
+
+// @ts-ignore
 import profile from "../../static/profile.jpeg";
 
 const Home: FunctionComponent = () => {

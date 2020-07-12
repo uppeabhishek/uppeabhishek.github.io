@@ -1,11 +1,27 @@
 import React, { FunctionComponent, useRef, SyntheticEvent } from "react";
+
+// @ts-ignore
 import github from "../../static/github.svg";
+
+// @ts-ignore
 import githubOriginal from "../../static/github_original.svg";
+
+// @ts-ignore
 import linkedin from "../../static/linkedin.svg";
+
+// @ts-ignore
 import linkedinOriginal from "../../static/linkedin_original.svg";
+
+// @ts-ignore
 import twitter from "../../static/twitter.svg";
+
+// @ts-ignore
 import twitterOriginal from "../../static/twitter_original.svg";
+
+// @ts-ignore
 import facebook from "../../static/facebook.svg";
+
+// @ts-ignore
 import facebookOriginal from "../../static/facebook_original.svg";
 import { Styles } from "./styles";
 
@@ -43,7 +59,7 @@ const SocialLinks: FunctionComponent = () => {
 
     return (
         <Styles>
-            <a href="https://github.com/uppeabhishek/" rel="noreferrer" target="_blank">
+            <a href="https://github.com/uppeabhishek/" rel="noopener noreferrer" target="_blank">
                 <img
                     alt="Github"
                     data-name="github"
@@ -54,7 +70,11 @@ const SocialLinks: FunctionComponent = () => {
                     onMouseOver={changeMouseOverImage}
                 />
             </a>
-            <a href="https://www.linkedin.com/in/uppeabhishek/" rel="noreferrer" target="_blank">
+            <a
+                href="https://www.linkedin.com/in/uppeabhishek/"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
                 <img
                     alt="Linked In"
                     data-name="linkedin"
@@ -65,7 +85,7 @@ const SocialLinks: FunctionComponent = () => {
                     onMouseOver={changeMouseOverImage}
                 />
             </a>
-            <a href="https://twitter.com/uppeabhishek97/" rel="noreferrer" target="_blank">
+            <a href="https://twitter.com/uppeabhishek97/" rel="noopener noreferrer" target="_blank">
                 <img
                     alt="Twitter"
                     data-name="twitter"
@@ -78,7 +98,7 @@ const SocialLinks: FunctionComponent = () => {
             </a>
             <a
                 href="https://www.facebook.com/profile.php?id=100004402809442/"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target="_blank"
             >
                 <img

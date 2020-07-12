@@ -1,4 +1,6 @@
 import styled from "styled-components/macro";
+
+// @ts-ignore
 import homePage from "../../static/homePage.jpg";
 
 export const Styles = styled.div`

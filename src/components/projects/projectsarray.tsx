@@ -1,24 +1,33 @@
 import React, { FunctionComponent, SyntheticEvent } from "react";
-import { ProjectStyles } from "./styles";
-import dummyImage from "../../static/dummyImage.svg";
 import { useHistory } from "react-router-dom";
+import { ProjectStyles } from "./styles";
+
+// @ts-ignore
+import dummyImage from "../../static/dummyImage.svg";
 
 interface ProjectInterface {
     name: string;
     displayName: string;
-    technology: string;
+    technologies: Array<string>;
     type: string;
     image: string;
+    allImages: Array<string>;
+    demoURL?: string;
     github?: string;
 }
 
-const projects = {
+export const projects = {
     Javascript: [
         {
             image: dummyImage,
             name: "memory-game",
             displayName: "Memory Game",
-            technology: "Javascript",
+            technologies: ["Javascript"],
+            allImages: [dummyImage, dummyImage],
+            description:
+                "This is a simple memory game written in vanilla javascript. Here the user should match all the cards in the group of 2 to win the game.",
+            demoURL: "https://uppeabhishek.github.io/memory-game/",
+            github: "https://github.com/uppeabhishek/memory-game/",
             type: "Javascript"
         }
     ],
@@ -27,7 +36,11 @@ const projects = {
             image: dummyImage,
             name: "ds-algo",
             displayName: "Data Structures and Algorithms",
-            technology: "Python",
+            technologies: ["Python"],
+            description:
+                "In this projects I have implemented various data structures and algorithms in python.",
+            allImages: [dummyImage, dummyImage],
+            github: "https://github.com/uppeabhishek/Data-Structures-and-Algorithms",
             type: "Python"
         }
     ],
@@ -36,7 +49,12 @@ const projects = {
             image: dummyImage,
             name: "sorting-visualizer",
             displayName: "Sorting Visualizer",
-            technology: "React JS / Python",
+            technologies: ["React JS"],
+            description:
+                "In this project we have various sorting algorithms which can be visualized.",
+            allImages: [dummyImage, dummyImage, dummyImage],
+            demoURL: "https://uppeabhishek.github.io/sorting-visualizer/",
+            github: "https://github.com/uppeabhishek/sorting-visualizer/",
             type: "ReactJS"
         }
     ]
@@ -59,13 +77,19 @@ const ProjectsArray: FunctionComponent<{ name: string }> = ({ name }) => {
     const history = useHistory();
 
     const goToProject = (e: SyntheticEvent<HTMLDivElement>) => {
-        history.push(`/projects/${e.currentTarget.dataset.name}/`);
-    }
+        history.push(`/projects/${e.currentTarget.dataset.type}/${e.currentTarget.dataset.name}`);
+    };
 
     return (
         <ProjectStyles className="projects">
             {res.map((project) => (
-                <div key={project.name} className="project center-items" data-name={project.name} onClick={goToProject}>
+                <div
+                    key={project.name}
+                    className="project center-items"
+                    data-name={project.name}
+                    data-type={project.type}
+                    onClick={goToProject}
+                >
                     <div className="img" style={{ backgroundImage: `url(${project.image})` }} />
                     <div className="description">{project.displayName}</div>
                 </div>

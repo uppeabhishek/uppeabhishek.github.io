@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
+import { NavLink, Link } from "react-router-dom";
 import { Styles } from "./styles";
-import { NavLink, Link } from 'react-router-dom';
 
 const Header: FunctionComponent = () => (
     <Styles>
@@ -11,19 +11,19 @@ const Header: FunctionComponent = () => (
             </Link>
         </div>
         <nav className="d-flex nav-links">
-            <NavLink activeClassName="active" to="/Home/">
+            <NavLink activeClassName="active" to="/home/">
                 Home
             </NavLink>
-            <NavLink activeClassName="active" to="/About/">
+            <NavLink activeClassName="active" to="/about/">
                 About
             </NavLink>
-            <NavLink activeClassName="active" to="/Projects/">
+            <NavLink activeClassName="active" to="/projects/">
                 Projects
             </NavLink>
-            <NavLink activeClassName="active" to="/Resume/">
+            <NavLink activeClassName="active" to="/resume/">
                 Resume
             </NavLink>
-            <NavLink activeClassName="active" to="/Contact/">
+            <NavLink activeClassName="active" to="/contact/">
                 Contact
             </NavLink>
         </nav>
