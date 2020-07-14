@@ -67,22 +67,51 @@ export const ProjectDescriptionStyles = styled.div`
     }
 
     .main {
-        .title {
-            font-size: 3rem;
+        .header {
+            margin-bottom: 50px;
+            justify-content: space-between;
+
+            .title {
+                font-size: 3rem;    
+            }
+
+            .project-links {
+                display: flex;
+                justify-content: space-between;
+
+                a:not(:last-child) { 
+                    margin-right: 10px;
+                } 
+            }
         }
 
-        .technology {
-            border: 4px solid ${(props) => props.theme.primaryColor};
-            border-radius: 10px;
+        .technologies {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 30px;
-            width: 100px;
-            font-size: 700;
-            color: white;
-            text-overflow: ellipsis;
-            background-color: ${(props) => props.theme.primaryColor};
+
+            .description {
+                font-size: 20px;
+                width: 40%;
+
+                li {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .slider {
+                width: 60%
+            }
+
+            @media only screen and (max-width: 600px) {
+                display: block;
+
+                .description {
+                    width: 100%;
+                }
+    
+                .slider {
+                    width: 100%
+                }
+            }
         }
 
         a {

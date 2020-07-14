@@ -51,7 +51,22 @@ export const projects = {
             displayName: "Sorting Visualizer",
             technologies: ["React JS"],
             description:
-                "In this project we have various sorting algorithms which can be visualized.",
+                `<div>
+                    <div style="font-weight: bold">
+                        Features
+                    </div>
+                    <ul>
+                        <li>
+                            Users can manually select a algorithm from the given list of algorithms.
+                        </li>
+                        <li>
+                            We can even add custom data and visualize the respective alogorithm.
+                        </li>
+                        <li>
+                            We can intialize the array either in increasing, decreasing, random (or) almost sorted manner.
+                        </li>
+                    </ul>
+                </div>`,
             allImages: [dummyImage, dummyImage, dummyImage],
             demoURL: "https://uppeabhishek.github.io/sorting-visualizer/",
             github: "https://github.com/uppeabhishek/sorting-visualizer/",

@@ -12,9 +12,11 @@ const ProjectDescription: FunctionComponent = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true
     };
 
     const goBack = () => {
@@ -26,49 +28,48 @@ const ProjectDescription: FunctionComponent = () => {
 
     return (
         <ProjectDescriptionStyles>
-            <Button className="goback" onClick={goBack}>
-                Go Back
-            </Button>
             <div className="main">
-                <div className="title center-items">{currentProject[0].displayName}</div>
-                <div className="technologies">
-                    {currentProject[0].technologies.map((ele: any) => (
-                        <div key={ele} className="technology">
-                            {ele}
-                        </div>
-                    ))}
-                    <div className="description">
-                        <div>{currentProject[0].description}</div>
+                <div className="header d-flex">
+                    <Button className="goback" onClick={goBack}>
+                        Go Back
+                    </Button>
+                    <div className="title">{currentProject[0].displayName}</div>
+                    <div className="project-links">
+                        {currentProject[0].demoURL ? (
+                            <a
+                                href={currentProject[0].demoURL}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <Button className="demo">Demo URL</Button>
+                            </a>
+                        ) : (
+                            ""
+                        )}
+                        {currentProject[0].github ? (
+                            <a
+                                href={currentProject[0].github}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                <Button className="github">View on github</Button>
+                            </a>
+                        ) : (
+                            ""
+                        )}
                     </div>
-                    <div>
+                </div>
+                <div className="technologies">
+                    <div className="description">
+                        <div dangerouslySetInnerHTML={{__html: currentProject[0].description}} />
+                    </div>
+                    <div className="slider">
                         <Slider {...settings}>
                             {currentProject[0].allImages.map((image: string, index: number) => {
                                 return <img key={index} alt="project" height={400} src={image} />;
                             })}
                         </Slider>
                     </div>
-                    {currentProject[0].demoURL ? (
-                        <a
-                            href={currentProject[0].demoURL}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <Button className="demo">Demo URL</Button>
-                        </a>
-                    ) : (
-                        ""
-                    )}
-                    {currentProject[0].github ? (
-                        <a
-                            href={currentProject[0].github}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <Button className="github">View on github</Button>
-                        </a>
-                    ) : (
-                        ""
-                    )}
                 </div>
             </div>
         </ProjectDescriptionStyles>
