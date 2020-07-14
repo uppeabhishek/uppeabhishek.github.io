@@ -46,11 +46,11 @@ const Skills: FunctionComponent = () => {
     ]);
 
     return (
-        <>
+        <div className="skills">
             {json.current.map((ele) => (
                 <SkillBar key={ele.name} name={ele.name} percentage={ele.percentage} />
             ))}
-        </>
+        </div>
     );
 };
 
