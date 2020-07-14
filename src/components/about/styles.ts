@@ -1,13 +1,11 @@
 import styled from "styled-components/macro";
 
 export const Styles = styled.div`
-
     height: 100%;
-    
     display: grid;
-    grid-template-areas: 'auto auto';
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-areas: "auto auto";
+    grid-column-gap: 0;
+    grid-row-gap: 0;
 
     .aboutme {
         font-size: 30px;

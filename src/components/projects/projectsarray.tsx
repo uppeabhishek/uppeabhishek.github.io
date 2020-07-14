@@ -50,8 +50,7 @@ export const projects = {
             name: "sorting-visualizer",
             displayName: "Sorting Visualizer",
             technologies: ["React JS"],
-            description:
-                `<div>
+            description: `<div>
                     <div style="font-weight: bold">
                         Features
                     </div>

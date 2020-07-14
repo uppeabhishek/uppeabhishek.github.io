@@ -44,7 +44,7 @@ const ProjectDescription: FunctionComponent = () => {
                                 <Button className="demo">Demo URL</Button>
                             </a>
                         ) : (
-                            ""
+                            <></>
                         )}
                         {currentProject[0].github ? (
                             <a
@@ -55,19 +55,19 @@ const ProjectDescription: FunctionComponent = () => {
                                 <Button className="github">View on github</Button>
                             </a>
                         ) : (
-                            ""
+                            <></>
                         )}
                     </div>
                 </div>
                 <div className="technologies">
                     <div className="description">
-                        <div dangerouslySetInnerHTML={{__html: currentProject[0].description}} />
+                        <div dangerouslySetInnerHTML={{ __html: currentProject[0].description }} />
                     </div>
                     <div className="slider">
                         <Slider {...settings}>
-                            {currentProject[0].allImages.map((image: string, index: number) => {
-                                return <img key={index} alt="project" height={400} src={image} />;
-                            })}
+                            {currentProject[0].allImages.map((image: string, index: number) => (
+                                <img key={index} alt="project" height={400} src={image} />
+                            ))}
                         </Slider>
                     </div>
                 </div>

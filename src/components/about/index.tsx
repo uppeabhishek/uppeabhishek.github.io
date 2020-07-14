@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Skills from "./skills";
-import {Styles} from './styles';
+import { Styles } from "./styles";
 import AboutMe from "./aboutme";
 import Goals from "./goals";
 

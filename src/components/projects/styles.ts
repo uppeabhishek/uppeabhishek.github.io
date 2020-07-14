@@ -67,21 +67,25 @@ export const ProjectDescriptionStyles = styled.div`
     }
 
     .main {
+        a {
+            cursor: pointer;
+        }
+
         .header {
             margin-bottom: 50px;
             justify-content: space-between;
 
             .title {
-                font-size: 3rem;    
+                font-size: 3rem;
             }
 
             .project-links {
                 display: flex;
                 justify-content: space-between;
 
-                a:not(:last-child) { 
+                a:not(:last-child) {
                     margin-right: 10px;
-                } 
+                }
             }
         }
 
@@ -98,7 +102,7 @@ export const ProjectDescriptionStyles = styled.div`
             }
 
             .slider {
-                width: 60%
+                width: 60%;
             }
 
             @media only screen and (max-width: 600px) {
@@ -107,15 +111,11 @@ export const ProjectDescriptionStyles = styled.div`
                 .description {
                     width: 100%;
                 }
-    
+
                 .slider {
-                    width: 100%
+                    width: 100%;
                 }
             }
-        }
-
-        a {
-            cursor: pointer;
         }
     }
 `;
