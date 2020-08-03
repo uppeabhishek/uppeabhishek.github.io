@@ -2,5 +2,5 @@ src/serviceWorker.ts
 src/react-app-env.d.ts
 node_modules/*
 .cache
-src/components/theme.ts
+src/theme.ts
 build/*

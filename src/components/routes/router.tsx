@@ -1,13 +1,12 @@
 import { Route, Switch } from "react-router-dom";
 import React, { lazy } from "react";
 import AuthorisedRoute from "./AuthorisedRoute";
-
-const Home = lazy(() => import("../home"));
-const Projects = lazy(() => import("../projects"));
-const Resume = lazy(() => import("../resume"));
-const About = lazy(() => import("../about"));
-const ProjectDescription = lazy(() => import("../projects/projectDescription"));
-const Contact = lazy(() => import("../contact"));
+import Projects from "../projects";
+import Resume from "../resume";
+import About from "../about";
+import ProjectDescription from "../projects/projectDescription";
+import Contact from "../contact";
+import Home from "../home";
 
 export function Router() {
     const NotFound = lazy(() => import("./NotFound"));

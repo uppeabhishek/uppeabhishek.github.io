@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useEffect, useRef } from "react";
 import { Styles } from "./styles";
 
 // @ts-ignore
@@ -13,6 +13,40 @@ const Home: FunctionComponent = () => {
         "AND MORE.."
     ];
 
+    const languageRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const timeout = 150;
+        let index = 0;
+        let i = 0;
+        let goForward = true;
+
+        function typeLetters() {
+            if (goForward) {
+                if (i < languages[index].length && languageRef.current) {
+                    languageRef.current.innerHTML += languages[index].charAt(i++);
+                } else {
+                    goForward = false;
+                }
+            } else if (i > -1 && languageRef.current) {
+                languageRef.current.innerHTML = languageRef.current.innerHTML.slice(0, -1);
+                i--;
+            } else {
+                i = 0;
+                if (index < languages.length - 1) {
+                    index += 1;
+                } else {
+                    index = 0;
+                }
+                goForward = true;
+            }
+        }
+
+        if (languageRef.current && languages.length) {
+            setInterval(typeLetters, timeout);
+        }
+    }, []);
+
     return (
         <Styles>
             <div className="about-me">
@@ -25,11 +59,7 @@ const Home: FunctionComponent = () => {
                 />
                 <div className="name">Abhishek Uppe</div>
                 <div className="languages center-items flex-col">
-                    {languages.map((ele, index) => (
-                        <div key={ele} className="language">
-                            {languages[index]}
-                        </div>
-                    ))}
+                    <div ref={languageRef} className="language" />
                 </div>
             </div>
         </Styles>

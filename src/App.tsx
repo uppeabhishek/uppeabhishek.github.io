@@ -6,6 +6,7 @@ import Header from "./components/header";
 import SocialLinks from "./components/socialLinks";
 import { headerHeight } from "./components/header/styles";
 import { Router } from "./components/routes/router";
+import { Loader } from "./components/loader";
 
 const GlobalStyle = createGlobalStyle`
     // @keyframes pulse {
@@ -72,6 +73,8 @@ const Styles = styled.div`
     height: 100%;
 
     main {
+        color: #dadde1;
+        background-color: ${(props) => props.theme.primaryBackgroundColor};
         position: relative;
         flex: 1;
         margin-top: ${headerHeight}px;
@@ -99,7 +102,7 @@ const App: FunctionComponent = () => (
     <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Styles>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={Loader}>
                 <BrowserRouter>
                     <Header />
                     <main>

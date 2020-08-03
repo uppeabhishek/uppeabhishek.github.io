@@ -23,8 +23,10 @@ const ProjectDescription: FunctionComponent = () => {
         history.goBack();
     };
 
+    console.log(projects, type);
+
     // @ts-ignore
-    const currentProject = projects[type].filter((ele) => ele.name === name);
+    const currentProject = projects[type].filter((ele) => ele.name === name.toLowerCase());
 
     return (
         <ProjectDescriptionStyles>

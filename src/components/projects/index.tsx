@@ -3,7 +3,7 @@ import { Styles } from "./styles";
 import ProjectsArray from "./projectsarray";
 
 const Projects: FunctionComponent = () => {
-    const technologies = useRef(["All", "ReactJS", "Javascript", "Python"]);
+    const technologies = useRef(["ALL", "REACT", "JAVASCRIPT", "PYTHON"]);
     const [selected, toggleSelected] = useState(technologies.current[0]);
 
     const handleClick = (e: KeyboardEvent, technology: string) => {

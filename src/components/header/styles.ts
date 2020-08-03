@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const headerHeight = "70";
 
 export const Styles = styled.header`
-    background-color: ${(props) => props.theme.primaryBackgroundColor};
+    background-color: ${(props) => props.theme.headerColor};
     display: flex;
     width: 100%;
     position: fixed;
@@ -41,9 +41,9 @@ export const Styles = styled.header`
     }
 
     a.active {
-        border-bottom-width: 4px;
-        border-bottom-color: ;
-        border-bottom-style: solid;
+        // border-bottom-width: 4px;
+        // border-bottom-color: ;
+        // border-bottom-style: solid;
         color: ${(props) => props.theme.primaryColor};
     }
 

@@ -13,9 +13,10 @@ export const Styles = styled.div`
         margin-bottom: 40px;
 
         .each-filter {
+            font-size: 16px;
             width: 100%;
             height: 40px;
-            border: 1px solid transparant;
+            border: 1px solid transparent;
             border-radius: 4px;
             padding: 5px 10px;
             font-size: 16px;
@@ -23,6 +24,7 @@ export const Styles = styled.div`
         }
 
         .each-filter.active {
+            font-weight: bold;
             color: white;
             background-color: ${(props) => props.theme.primaryColor};
         }
@@ -67,6 +69,7 @@ export const ProjectDescriptionStyles = styled.div`
     }
 
     .main {
+        color: white;
         a {
             cursor: pointer;
         }
