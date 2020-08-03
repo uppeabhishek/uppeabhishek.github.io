@@ -1,2 +1,0 @@
-(this["webpackJsonpuppeabhishek-website"]=this["webpackJsonpuppeabhishek-website"]||[]).push([[9],{71:function(e,t,s){"use strict";s.r(t);var i=s(0),o=s.n(i);t.default=function(){return o.a.createElement("iframe",{title:"contactInfo",src:"https://docs.google.com/forms/d/e/1FAIpQLSe_Ho8OT1j6QwcWrf-xd8uF2AwPFkW0VCuMPgRkjMd1jM5F8Q/viewform?embedded=true",frameBorder:"0",style:{width:"100%",height:"100%"}},"Loading\u2026")}}}]);
-//# sourceMappingURL=9.70426858.chunk.js.map
