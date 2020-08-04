@@ -26,7 +26,9 @@ const Home: FunctionComponent = () => {
                 if (i < languages[index].length && languageRef.current) {
                     languageRef.current.innerHTML += languages[index].charAt(i++);
                 } else {
-                    goForward = false;
+                    setTimeout(() => {
+                        goForward = false;
+                    }, timeout*10);
                 }
             } else if (i > -1 && languageRef.current) {
                 languageRef.current.innerHTML = languageRef.current.innerHTML.slice(0, -1);
