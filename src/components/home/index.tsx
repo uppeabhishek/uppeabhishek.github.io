@@ -50,21 +50,23 @@ const Home: FunctionComponent = () => {
     }, []);
 
     return (
-        <Styles>
-            <div className="about-me">
-                <img
-                    alt="Abhishek Uppe"
-                    className="profile-image"
-                    height={200}
-                    src={profile}
-                    width={200}
-                />
-                <div className="name">Abhishek Uppe</div>
-                <div className="languages center-items flex-col">
-                    <div ref={languageRef} className="language" />
+        <>
+            <Styles>
+                <div className="about-me">
+                    <img
+                        alt="Abhishek Uppe"
+                        className="profile-image"
+                        height={200}
+                        src={profile}
+                        width={200}
+                    />
+                    <div className="name">Abhishek Uppe</div>
+                    <div className="languages center-items flex-col">
+                        <div ref={languageRef} className="language" />
+                    </div>
                 </div>
-            </div>
-        </Styles>
+            </Styles>
+        </>
     );
 };
 

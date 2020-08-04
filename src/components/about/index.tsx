@@ -6,9 +6,12 @@ import Goals from "./goals";
 
 const About: FunctionComponent = () => (
     <Styles>
-        <AboutMe />
-        <Goals />
-        <Skills />
+        <div className="page-title">ABOUT</div>
+        <div className="about grid-container">
+            <Goals />
+            <AboutMe />
+            <Skills />
+        </div>
     </Styles>
 );
 

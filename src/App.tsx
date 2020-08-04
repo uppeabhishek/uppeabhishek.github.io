@@ -7,6 +7,7 @@ import SocialLinks from "./components/socialLinks";
 import { headerHeight } from "./components/header/styles";
 import { Router } from "./components/routes/router";
 import { Loader } from "./components/loader";
+import PageName from "./components/pagename";
 
 const GlobalStyle = createGlobalStyle`
     // @keyframes pulse {
@@ -25,6 +26,13 @@ const GlobalStyle = createGlobalStyle`
         height: 100vh;
         font-family: 'Roboto', sans-serif;
         animation: pulse 3s ease-in-out;
+
+        .page-title {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: ${(props) => props.theme.primaryColor};
+        }
     }
 
     #root {
@@ -64,6 +72,15 @@ const GlobalStyle = createGlobalStyle`
 
     .cursor-pointer {
         cursor: pointer;
+    }
+
+    .overflow-auto {
+        overflow: auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: ${(props) => props.theme.primaryColor};
     }
 `;
 
@@ -110,7 +127,7 @@ const App: FunctionComponent = () => (
                     </main>
                 </BrowserRouter>
             </Suspense>
-            <div className="body">
+            <div>
                 <SocialLinks />
             </div>
         </Styles>

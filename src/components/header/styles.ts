@@ -12,6 +12,7 @@ export const Styles = styled.header`
     max-width: 100%;
     height: ${headerHeight}px;
     overflow-x: auto;
+    overflow-y: hidden;
     color: white;
     transition: all 1s ease-in-out;
 
@@ -41,9 +42,7 @@ export const Styles = styled.header`
     }
 
     a.active {
-        // border-bottom-width: 4px;
-        // border-bottom-color: ;
-        // border-bottom-style: solid;
+        font-weight: bold;
         color: ${(props) => props.theme.primaryColor};
     }
 

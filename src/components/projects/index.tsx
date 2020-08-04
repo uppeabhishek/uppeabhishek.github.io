@@ -14,7 +14,8 @@ const Projects: FunctionComponent = () => {
 
     return (
         <Styles>
-            <div className="filters d-flex">
+            <div className="page-title">PROJECTS</div>
+            <div className="filters d-flex overflow-auto">
                 {technologies.current.map((technology: string) => {
                     const className = technology === selected ? "active" : "";
 
