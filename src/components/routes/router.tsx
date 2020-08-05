@@ -1,5 +1,5 @@
-import { Route, Switch } from "react-router-dom";
-import React, { lazy } from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
+import React, { lazy, useEffect } from "react";
 import AuthorisedRoute from "./AuthorisedRoute";
 import Projects from "../projects";
 import Resume from "../resume";
@@ -10,6 +10,20 @@ import Home from "../home";
 
 export function Router() {
     const NotFound = lazy(() => import("./NotFound"));
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const title = document.querySelector("title");
+        if (title) {
+            let res = "";
+            const string = location.pathname.replace(/\//g, "");
+            if (string.length > 1) {
+                res = string[0].toUpperCase() + string.slice(1)
+            }
+            title.innerText = "Abhishek Uppe | " + res;
+        }
+    }, [location]);
 
     return (
         <Switch>

@@ -6,9 +6,8 @@ import { MobileHeaderStyles as Styles } from "./styles";
 const MobileHeader: FunctionComponent = () => (
     <Styles className="mobile-header router-links">
         {links.map((link) => (
-            <div className="each-link">
+            <div className="each-link" key={link.name}>
                 <NavLink
-                    key={link.to}
                     activeClassName="active"
                     to={link.to}
                     onClick={toggleHamburger}
