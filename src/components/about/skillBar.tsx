@@ -8,7 +8,7 @@ interface SkillBarType {
 
 const SkillBar: FunctionComponent<SkillBarType> = ({ name, percentage }) => (
     <SkillStyle width={percentage}>
-        <div className="name center-items" title={name}>
+        <div className="name" title={name}>
             {name}
         </div>
         <div className="bar">

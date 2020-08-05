@@ -30,7 +30,7 @@ const ProjectDescription: FunctionComponent = () => {
 
     return (
         <ProjectDescriptionStyles>
-            <div className="main">
+            <div className="main-body">
                 <div className="header d-flex">
                     <Button className="goback" onClick={goBack}>
                         Go Back

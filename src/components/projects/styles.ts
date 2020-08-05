@@ -73,7 +73,7 @@ export const ProjectDescriptionStyles = styled.div`
         left: 10px;
     }
 
-    .main {
+    .main-body {
         color: white;
         a {
             cursor: pointer;

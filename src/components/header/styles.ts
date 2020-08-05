@@ -2,6 +2,8 @@ import styled from "styled-components/macro";
 
 export const headerHeight = "70";
 
+export const footerHeight = "50";
+
 export const Styles = styled.header`
     background-color: ${(props) => props.theme.headerColor};
     display: flex;
@@ -84,7 +86,7 @@ export const Styles = styled.header`
 `;
 
 export const MobileHeaderStyles = styled.div`
-    position: absolute;
+    position: fixed;
     height: 100%;
     top: 0;
     width: 100%;

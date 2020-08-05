@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { theme } from "./theme";
 import Header from "./components/header";
 import SocialLinks from "./components/socialLinks";
-import { headerHeight } from "./components/header/styles";
+import { headerHeight, footerHeight } from "./components/header/styles";
 import { Router } from "./components/routes/router";
 import { Loader } from "./components/loader";
 import MobileHeader from "./components/header/MobileHeader";
@@ -102,6 +102,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Styles = styled.div`
+    // overflow-x: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -112,11 +113,12 @@ const Styles = styled.div`
         position: relative;
         flex: 1;
         margin-top: ${headerHeight}px;
+        margin-bottom: ${footerHeight}px;
     }
 
     .slick-prev,
     .slick-next {
-        z-index: 1000;
+        z-index: 2;
         background-color: ${(props) => props.theme.primaryColor};
         width: 30px;
         height: 30px;
@@ -129,6 +131,17 @@ const Styles = styled.div`
 
     .slick-next {
         right: 0;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        background: ${(props) => props.theme.headerColor};
+        padding: 10px 0;
+        height: ${footerHeight};
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
     }
 `;
 
@@ -145,9 +158,9 @@ const App: FunctionComponent = () => (
                     </main>
                 </BrowserRouter>
             </Suspense>
-            <div>
+            <footer>
                 <SocialLinks />
-            </div>
+            </footer>
         </Styles>
     </ThemeProvider>
 );

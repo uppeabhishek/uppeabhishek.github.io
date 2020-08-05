@@ -55,11 +55,15 @@ export const SkillStyle = styled.div<SkillStyleInterface>`
     margin: 0 0 1em 0;
 
     .name {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color:  ${(props) => props.theme.primaryBackgroundColor};
         overflow: hidden;
-        text-overflow: ellipses;
+        text-overflow: ellipsis;
         background-color: ${(props) => props.theme.primaryColor};
-        width: 20%;
+        width: 30%;
     }
 
     .bar {

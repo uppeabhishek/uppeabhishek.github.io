@@ -32,6 +32,7 @@ export const Styles = styled.div`
         overflow-x: auto;
 
         .languages {
+            
             @media (max-width: 1000px) {
                 font-size: 3vw;
             }
@@ -39,7 +40,6 @@ export const Styles = styled.div`
             @media (max-width: 600px) {
                 font-size: 4vw;
             }
-            
 
             font-size: 1.5vw;
             font-weight: 700;
