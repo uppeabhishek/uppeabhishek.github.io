@@ -8,7 +8,7 @@ const About: FunctionComponent = () => (
     <Styles>
         <div className="page-title">ABOUT</div>
         <div className="about grid-container">
-            <Goals />
+            {/* <Goals /> */}
             <AboutMe />
             <Skills />
         </div>

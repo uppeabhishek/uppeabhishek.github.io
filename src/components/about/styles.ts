@@ -13,9 +13,12 @@ export const Styles = styled.div`
 
     .grid-container {
         display: grid;
-        
-        .grid-item {
-            
+        grid-template-columns: 45% 1fr;
+        grid-gap: 30px;
+
+        @media (max-width: 900px) {
+            grid-template-columns: auto;
+            grid-gap: 0;
         }
 
         .title {
@@ -27,6 +30,7 @@ export const Styles = styled.div`
         }
 
         .aboutme {
+            font-size: 18px;
             .stack-skill {
                 font-style: italic;
                 color: ${(props) => props.theme.primaryColor};
@@ -34,26 +38,7 @@ export const Styles = styled.div`
         }
 
     }
-    
 
-    // .about-skills {
-    //     margin-top: 20px;
-    //     display: flex;
-
-    //     @media (max-width: 900px) {
-    //         flex-direction: column;
-    //         .aboutme {
-    //             width: 100% !important;
-    //             margin-bottom: 30px;
-    //             margin-right: 0 !important;
-    //         }
-    //     }
-        
-
-    //     .skills {
-    //         flex: 1;
-    //     }
-    // }
 `;
 
 

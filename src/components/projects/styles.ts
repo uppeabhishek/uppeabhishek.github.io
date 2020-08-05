@@ -8,6 +8,11 @@ export const Styles = styled.div`
     flex-direction: column;
     padding: 40px 15% 0 15%;
 
+    @media (max-width: 800px) {
+        max-width: 90%;
+        padding: 40px 5% 0 5%;
+    }
+
     .filters {
         justify-content: space-between;
         margin-bottom: 40px;
