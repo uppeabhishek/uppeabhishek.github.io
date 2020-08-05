@@ -42,11 +42,14 @@ const Skills: FunctionComponent = () => {
         {
             name: "Django",
             percentage: 70
-        },
-        // {
-        //     name: "Linux",
-        //     percentage: 85
-        // }
+        }
+
+        /*
+         * {
+         *     name: "Linux",
+         *     percentage: 85
+         * }
+         */
     ]);
 
     return (

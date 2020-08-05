@@ -1,15 +1,11 @@
 import styled, { keyframes } from "styled-components/macro";
 
 export const Styles = styled.div`
-    // display: grid;
-    // grid-template-areas: "auto auto";
-    // grid-column-gap: 0;
-    // grid-row-gap: 0;
-
     margin: 40px;
 
-    // display: flex;
-    // flex-direction: column;
+    @media (max-width: 600px) {
+        margin: 20px;
+    }
 
     .grid-container {
         display: grid;
@@ -18,29 +14,25 @@ export const Styles = styled.div`
 
         @media (max-width: 900px) {
             grid-template-columns: auto;
-            grid-gap: 0;
         }
 
         .title {
             color: ${(props) => props.theme.primaryColor};
             text-align: center;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 24px;
             margin: 20px 0;
         }
 
         .aboutme {
-            font-size: 18px;
+            font-size: 22px;
             .stack-skill {
                 font-style: italic;
                 color: ${(props) => props.theme.primaryColor};
             }
         }
-
     }
-
 `;
-
 
 interface SkillStyleInterface {
     width: number;
@@ -53,7 +45,7 @@ const widthAnimation = (width: number) => keyframes`
     100% {
         width: ${width}%;
     }
-`
+`;
 
 export const SkillStyle = styled.div<SkillStyleInterface>`
     display: flex;
@@ -77,8 +69,8 @@ export const SkillStyle = styled.div<SkillStyleInterface>`
 
         .color {
             background-color: ${(props) => props.theme.primaryColor};
-            animation: ${props => widthAnimation(props.width)} 1s ease-in-out;
-            width: ${props => props.width}%;
+            animation: ${(props) => widthAnimation(props.width)} 1s ease-in-out;
+            width: ${(props) => props.width}%;
             filter: brightness(75%);
             height: 100%;
         }

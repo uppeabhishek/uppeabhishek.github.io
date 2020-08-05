@@ -7,17 +7,9 @@ import SocialLinks from "./components/socialLinks";
 import { headerHeight } from "./components/header/styles";
 import { Router } from "./components/routes/router";
 import { Loader } from "./components/loader";
-import PageName from "./components/pagename";
+import MobileHeader from "./components/header/MobileHeader";
 
 const GlobalStyle = createGlobalStyle`
-    // @keyframes pulse {
-    //     0% {
-    //     background-color: #61dafb;
-    //     }
-    //     100% {
-    //     background-color: white;
-    //     }
-    // }
     
     body {
         color: #616161;
@@ -33,54 +25,79 @@ const GlobalStyle = createGlobalStyle`
             margin-bottom: 50px;
             color: ${(props) => props.theme.primaryColor};
         }
-    }
 
-    #root {
-      height: 100%;
-    }
+        .main-filter {
+            filter: brightness(0.1);
+        }
 
-    .d-flex {
-        display: flex;
-    }
+        .z-index-1 {
+            z-index: 1;
+        }
 
-    .w-100 {
-        width: 100%;
-    }
+        #root {
+            height: 100%;
+        }
 
-    .h-100 {
-        height: 100%;
-    }
+        .d-flex {
+            display: flex;
+        }
 
-    .justify-center {
-        justify-content: center;
-    }
+        .w-100 {
+            width: 100%;
+        }
 
-    .align-center {
-        align-items: center;
-    }
+        .h-100 {
+            height: 100%;
+        }
 
-    .center-items {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .justify-center {
+            justify-content: center;
+        }
 
-    .flex-col {
-        display: flex;
-        flex-direction: column;
-    }
+        .align-center {
+            align-items: center;
+        }
 
-    .cursor-pointer {
-        cursor: pointer;
-    }
+        .center-items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .overflow-auto {
-        overflow: auto;
-    }
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
 
-    a {
-        text-decoration: none;
-        color: ${(props) => props.theme.primaryColor};
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .overflow-auto {
+            overflow: auto;
+        }
+
+        .router-links {
+            a {
+                filter: brightness(0.6);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: ${(props) => props.theme.primaryColor};
+        }
+
+        a.active {
+            filter: brightness(1);
+            font-weight: bold;
+            color: ${(props) => props.theme.primaryColor};
+        }
+
+        a:hover {
+            filter: brightness(1);
+            color: ${(props) => props.theme.primaryColor};
+        }
     }
 `;
 
@@ -122,6 +139,7 @@ const App: FunctionComponent = () => (
             <Suspense fallback={Loader}>
                 <BrowserRouter>
                     <Header />
+                    <MobileHeader />
                     <main>
                         <Router />
                     </main>
