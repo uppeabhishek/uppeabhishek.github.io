@@ -10,8 +10,8 @@ interface ProjectInterface {
     displayName: string;
     technologies: Array<string>;
     type: string;
-    image: string;
-    allImages: Array<string>;
+    image?: string;
+    allImages?: Array<string>;
     demoURL?: string;
     github?: string;
 }
@@ -86,6 +86,34 @@ export const projects = {
         }
     ],
     PYTHON: [
+        {
+            name: "steganography",
+            displayName: "Steganography",
+            technologies: ["Python"],
+            description:
+                `<div>In this project I have implemented LST(Least Significant Bit) algorithm on Steganography.</div>
+                <br />
+                <div style="font-weight: bold">
+                    Features
+                </div>
+                <ul>
+                    <li>
+                        <span style="font-weight: bold">
+                            Encoding:
+                        </span>
+                        Users can to enter an image path and text to be encoded and the output will be embedded text within image.
+                    </li>
+                    <li>
+                        <span style="font-weight: bold">
+                            Decoding:
+                        </span>
+                        Users can to enter an image path to be decoded and the output will be decoded text.
+                    </li>
+                </ul>
+                `,
+            github: "https://github.com/uppeabhishek/steganography",
+            type: "PYTHON"
+        },
         {
             image: dummyImage,
             name: "ds-algo",

@@ -65,13 +65,15 @@ const ProjectDescription: FunctionComponent = () => {
                     <div className="description">
                         <div dangerouslySetInnerHTML={{ __html: currentProject[0].description }} />
                     </div>
-                    <div className="slider">
-                        <Slider {...settings}>
-                            {currentProject[0].allImages.map((image: string, index: number) => (
-                                <img key={index} alt="project" height={400} src={image} />
-                            ))}
-                        </Slider>
-                    </div>
+                    {currentProject[0].allImages && 
+                        <div className="slider">
+                            <Slider {...settings}>
+                                {currentProject[0].allImages.map((image: string, index: number) => (
+                                    <img key={index} alt="project" height={400} src={image} />
+                                ))}
+                            </Slider>
+                        </div>
+                    }
                 </div>
             </div>
         </ProjectDescriptionStyles>
