@@ -179,7 +179,7 @@ const LinearProjectsArray: FunctionComponent<{ name: string }> = ({ name }) => {
                         ''}
                         {project.github ? 
                             <a
-                                href={project.demoURL}
+                                href={project.github}
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
