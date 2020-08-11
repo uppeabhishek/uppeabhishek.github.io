@@ -100,6 +100,7 @@ export const Styles = styled.div`
     height: 100%;
 
     main {
+        overflow-x: hidden;
         color: #dadde1;
         background-color: ${(props) => props.theme.primaryBackgroundColor};
         position: relative;

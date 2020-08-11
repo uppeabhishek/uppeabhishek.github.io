@@ -127,3 +127,34 @@ export const ProjectDescriptionStyles = styled.div`
         }
     }
 `;
+
+export const LinearProjectStyles = styled.div`
+    
+    .project {
+
+        border: 1px solid ${(props) => props.theme.primaryColor};
+        padding: 20px 10px;
+        border-radius: 20px;
+
+        margin: 20px 0;
+
+        >* {
+            margin-bottom: 10px;
+        }
+
+        .links {
+            a {
+                margin-right: 10px;
+            }
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 18px;
+        }
+    }
+`;

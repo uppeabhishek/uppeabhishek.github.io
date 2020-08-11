@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useRef, useState } from "react";
 import { Styles } from "./styles";
-import ProjectsArray from "./projectsarray";
+import LinearProjectsArray from "./linearProjectsArray";
 
 const Projects: FunctionComponent = () => {
     const technologies = useRef(["ALL", "REACT", "JAVASCRIPT", "PYTHON"]);
@@ -35,7 +35,7 @@ const Projects: FunctionComponent = () => {
                     );
                 })}
             </div>
-            <ProjectsArray name={selected} />
+            <LinearProjectsArray name={selected} />
         </Styles>
     );
 };
