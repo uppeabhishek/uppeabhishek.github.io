@@ -92,11 +92,22 @@ export const projects = {
     ],
     PYTHON: [
         {
-            name: "steganography",
-            displayName: "Steganography",
+            name: "visual_cryptography_steganography",
+            displayName: "Visual Cryptography Steganography",
             technologies: ["Python"],
             description:
-                `<div>In this project I have implemented LST(Least Significant Bit) algorithm on Steganography.</div>
+                `
+                <div>Cryptography is the process of encryption and decryption of text data.</div>
+                <br />
+                <div>Steganography is the process of hiding text data inside images, audio, video.</div>
+                <br />
+                <div>So we can mix both Cryptography and Steganography and achieve good level of security while transmitting images or videos.</div>
+                <br />
+                <div>I have used AES algorithm for text encryption and decryption.</div>
+                <br />
+                <div>There are several algorithms for achieving steganography.</div>
+                <br />
+                <div>In this project I have implemented LST(Least Significant Bit) algorithm on Steganography.</div>
                 <br />
                 <div style="font-weight: bold">
                     Features
@@ -106,17 +117,18 @@ export const projects = {
                         <span style="font-weight: bold">
                             Encoding:
                         </span>
-                        Users can to enter an image path and text to be encoded and the output will be embedded text within image.
+                        Users need to enter an image path, secret key and text to be encoded and the output will be image with encrypted text hidden inside image.
                     </li>
+                    <br />
                     <li>
                         <span style="font-weight: bold">
                             Decoding:
                         </span>
-                        Users can to enter an image path to be decoded and the output will be decoded text.
+                        Users need to enter an image path and secret key to decode text and the output will be decrypted Text decoded from image.
                     </li>
                 </ul>
                 `,
-            github: "https://github.com/uppeabhishek/steganography",
+            github: "https://github.com/uppeabhishek/visual-cryptography-steganography",
             type: "PYTHON"
         },
         {
