@@ -90,8 +90,7 @@ export const projects = {
             name: "steganography",
             displayName: "Steganography",
             technologies: ["Python"],
-            description:
-                `<div>In this project I have implemented LST(Least Significant Bit) algorithm on Steganography.</div>
+            description: `<div>In this project I have implemented LST(Least Significant Bit) algorithm on Steganography.</div>
                 <br />
                 <div style="font-weight: bold">
                     Features

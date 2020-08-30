@@ -7,11 +7,7 @@ const MobileHeader: FunctionComponent = () => (
     <Styles className="mobile-header router-links">
         {links.map((link) => (
             <div className="each-link" key={link.name}>
-                <NavLink
-                    activeClassName="active"
-                    to={link.to}
-                    onClick={toggleHamburger}
-                >
+                <NavLink activeClassName="active" to={link.to} onClick={toggleHamburger}>
                     {link.name}
                 </NavLink>
             </div>

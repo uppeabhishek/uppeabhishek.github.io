@@ -19,7 +19,7 @@ export function Router() {
             let res = "";
             const string = location.pathname.replace(/\//g, "");
             if (string.length > 1) {
-                res = string[0].toUpperCase() + string.slice(1)
+                res = string[0].toUpperCase() + string.slice(1);
             }
             title.innerText = "Abhishek Uppe | " + res;
         }

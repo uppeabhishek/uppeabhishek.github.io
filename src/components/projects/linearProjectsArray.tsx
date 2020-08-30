@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { LinearProjectStyles } from "./styles";
-import {Button} from "../Button";
+import { Button } from "../Button";
 
 // @ts-ignore
 import dummyImage from "../../static/dummyImage.svg";
@@ -76,27 +76,12 @@ export const projects = {
             type: "REACT"
         }
     ],
-    JAVASCRIPT: [
-        {
-            image: dummyImage,
-            name: "memory-game",
-            displayName: "Memory Game",
-            technologies: ["Javascript"],
-            allImages: [dummyImage, dummyImage],
-            description:
-                "This is a simple memory game written in vanilla javascript. Here the user should match all the cards in the group of 2 to win the game.",
-            demoURL: "https://uppeabhishek.github.io/memory-game/",
-            github: "https://github.com/uppeabhishek/memory-game/",
-            type: "JAVASCRIPT"
-        }
-    ],
     PYTHON: [
         {
             name: "visual_cryptography_steganography",
             displayName: "Visual Cryptography Steganography",
             technologies: ["Python"],
-            description:
-                `
+            description: `
                 <div>Cryptography is the process of encryption and decryption of text data.</div>
                 <br />
                 <div>Steganography is the process of hiding text data inside images, audio, video.</div>
@@ -130,17 +115,31 @@ export const projects = {
                 `,
             github: "https://github.com/uppeabhishek/visual-cryptography-steganography",
             type: "PYTHON"
-        },
+        }
+        // {
+        //     image: dummyImage,
+        //     name: "ds-algo",
+        //     displayName: "Data Structures and Algorithms",
+        //     technologies: ["Python"],
+        //     description:
+        //         "In this projects I have implemented various data structures and algorithms in python.",
+        //     allImages: [dummyImage, dummyImage],
+        //     github: "https://github.com/uppeabhishek/Data-Structures-and-Algorithms",
+        //     type: "PYTHON"
+        // }
+    ],
+    JAVASCRIPT: [
         {
             image: dummyImage,
-            name: "ds-algo",
-            displayName: "Data Structures and Algorithms",
-            technologies: ["Python"],
-            description:
-                "In this projects I have implemented various data structures and algorithms in python.",
+            name: "memory-game",
+            displayName: "Memory Game",
+            technologies: ["Javascript"],
             allImages: [dummyImage, dummyImage],
-            github: "https://github.com/uppeabhishek/Data-Structures-and-Algorithms",
-            type: "PYTHON"
+            description:
+                "This is a simple memory game written in vanilla javascript. Here the user should match all the cards in the group of 2 to win the game.",
+            demoURL: "https://uppeabhishek.github.io/memory-game/",
+            github: "https://github.com/uppeabhishek/memory-game/",
+            type: "JAVASCRIPT"
         }
     ]
 };
@@ -169,10 +168,7 @@ const LinearProjectsArray: FunctionComponent<{ name: string }> = ({ name }) => {
                     data-type={project.type}
                 >
                     <div className="title">
-                        <a
-                            href={project.github}
-                            rel="noopener noreferrer"
-                            target="_blank">
+                        <a href={project.github} rel="noopener noreferrer" target="_blank">
                             {project.displayName}
                         </a>
                     </div>
@@ -180,24 +176,20 @@ const LinearProjectsArray: FunctionComponent<{ name: string }> = ({ name }) => {
                         <div dangerouslySetInnerHTML={{ __html: project.description }} />
                     </div>
                     <div className="links">
-                        {project.demoURL ? 
-                            <a
-                                href={project.demoURL}
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
+                        {project.demoURL ? (
+                            <a href={project.demoURL} rel="noopener noreferrer" target="_blank">
                                 <Button className="demo">Demo URL</Button>
-                            </a> : 
-                        ''}
-                        {project.github ? 
-                            <a
-                                href={project.github}
-                                rel="noopener noreferrer"
-                                target="_blank"
-                            >
+                            </a>
+                        ) : (
+                            ""
+                        )}
+                        {project.github ? (
+                            <a href={project.github} rel="noopener noreferrer" target="_blank">
                                 <Button className="demo">Github URL</Button>
-                            </a> : 
-                        ''}
+                            </a>
+                        ) : (
+                            ""
+                        )}
                     </div>
                 </div>
             ))}

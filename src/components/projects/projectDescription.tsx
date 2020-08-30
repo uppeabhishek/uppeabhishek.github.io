@@ -65,7 +65,7 @@ const ProjectDescription: FunctionComponent = () => {
                     <div className="description">
                         <div dangerouslySetInnerHTML={{ __html: currentProject[0].description }} />
                     </div>
-                    {currentProject[0].allImages && 
+                    {currentProject[0].allImages && (
                         <div className="slider">
                             <Slider {...settings}>
                                 {currentProject[0].allImages.map((image: string, index: number) => (
@@ -73,7 +73,7 @@ const ProjectDescription: FunctionComponent = () => {
                                 ))}
                             </Slider>
                         </div>
-                    }
+                    )}
                 </div>
             </div>
         </ProjectDescriptionStyles>

@@ -10,7 +10,6 @@ import { Loader } from "./components/loader";
 import MobileHeader from "./components/header/MobileHeader";
 
 const App: FunctionComponent = () => {
-
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
