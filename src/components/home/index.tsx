@@ -9,7 +9,6 @@ const Home: FunctionComponent = () => {
         "SOFTWARE DEVELOPER",
         "WEB DEVELOPER",
         "REACT NATIVE DEVELOPER",
-        "ANDROID DEVELOPER",
         "AND MORE.."
     ];
 
