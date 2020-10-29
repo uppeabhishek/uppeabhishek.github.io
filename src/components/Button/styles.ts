@@ -8,9 +8,9 @@ export const Styles = styled.button`
     padding: 10px;
     font-size: 14px;
     font-weight: bold;
+    background-color: transparent;
 
     :hover {
         color: white;
-        background-color: ${(props) => props.theme.primaryColor};
     }
 `;
