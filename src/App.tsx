@@ -15,7 +15,7 @@ const App: FunctionComponent = () => {
             <GlobalStyle />
             <Styles>
                 <Suspense fallback={Loader}>
-                    <BrowserRouter>
+                    <BrowserRouter basename={process.env.PUBLIC_URL}>
                         <Header />
                         <MobileHeader />
                         <main>
