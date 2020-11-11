@@ -1,7 +1,7 @@
 import React, { FunctionComponent, Suspense } from "react";
 import { ThemeProvider } from "styled-components/macro";
 import { GlobalStyle, Styles } from "./AppStyles";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { theme } from "./theme";
 import Header from "./components/header";
 import SocialLinks from "./components/socialLinks";
@@ -15,13 +15,13 @@ const App: FunctionComponent = () => {
             <GlobalStyle />
             <Styles>
                 <Suspense fallback={Loader}>
-                    <BrowserRouter basename={process.env.PUBLIC_URL}>
+                    <HashRouter>
                         <Header />
                         <MobileHeader />
                         <main>
                             <Router />
                         </main>
-                    </BrowserRouter>
+                    </HashRouter>
                 </Suspense>
                 <footer>
                     <SocialLinks />
