@@ -78,12 +78,12 @@ const SocialLinks: FunctionComponent = () => {
             href: "https://www.linkedin.com/in/uppeabhishek/",
             src: linkedinOriginal
         },
-        {
-            alt: "Twitter",
-            dataName: "twitter",
-            href: "https://twitter.com/uppeabhishek97/",
-            src: twitterOriginal
-        },
+        // {
+        //     alt: "Twitter",
+        //     dataName: "twitter",
+        //     href: "https://twitter.com/uppeabhishek97/",
+        //     src: twitterOriginal
+        // },
         {
             alt: "Facebook",
             dataName: "facebook",
