@@ -5,7 +5,7 @@ const Skills: FunctionComponent = () => {
     const json = useRef([
         {
             name: "Java",
-            percentage: 80
+            percentage: 90
         },
         {
             name: "Python",
@@ -25,7 +25,7 @@ const Skills: FunctionComponent = () => {
         },
         {
             name: "SpringBoot",
-            percentage: 80
+            percentage: 85
         },
         {
             name: "React",
@@ -37,7 +37,7 @@ const Skills: FunctionComponent = () => {
         },
         {
             name: "MySQL",
-            percentage: 80
+            percentage: 85
         }
     ]);
 
