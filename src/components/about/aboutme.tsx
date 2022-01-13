@@ -7,13 +7,12 @@ const AboutMe: FunctionComponent = () => (
         <div>Hello, I'm Abhishek Uppe,</div>
         <br />
         <div>
-            I'm an enthusiastic <span className="stack-skill">Full-Stack Web Developer </span>,{" "}
-            <span className="stack-skill">React Native Mobile Developer</span> and
+            I'm an enthusiastic <span className="stack-skill">Full-Stack Web Developer</span>,
             <span className="stack-skill"> Problem Solver </span>
-            and I'm huge fan of <span className="stack-skill">Javascript </span>,
-            <span className="stack-skill"> ReactJS </span>
-            and
+            and I'm huge fan of <span className="stack-skill">Java</span>,
             <span className="stack-skill"> Python </span>
+            and
+            <span className="stack-skill"> Javascript </span>
             and build applications around them.
         </div>
         <br />

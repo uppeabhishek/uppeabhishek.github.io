@@ -4,52 +4,41 @@ import SkillBar from "./skillBar";
 const Skills: FunctionComponent = () => {
     const json = useRef([
         {
-            name: "Javascript",
-            percentage: 90
-        },
-        {
-            name: "React",
-            percentage: 90
-        },
-        {
-            name: "React Redux",
-            percentage: 85
-        },
-        {
-            name: "React Native",
-            percentage: 75
-        },
-        {
-            name: "Typescript",
-            percentage: 70
-        },
-        {
-            name: "HTML5",
-            percentage: 85
-        },
-        {
-            name: "CSS",
+            name: "Java",
             percentage: 80
-        },
-        {
-            name: "Bootstrap",
-            percentage: 75
         },
         {
             name: "Python",
             percentage: 90
         },
         {
-            name: "Django",
+            name: "Javascript",
+            percentage: 90
+        },
+        {
+            name: "Typescript",
             percentage: 70
+        },
+        {
+            name: "Django",
+            percentage: 80
+        },
+        {
+            name: "SpringBoot",
+            percentage: 80
+        },
+        {
+            name: "React",
+            percentage: 90
+        },
+        {
+            name: "React Native",
+            percentage: 75
+        },
+        {
+            name: "MySQL",
+            percentage: 80
         }
-
-        /*
-         * {
-         *     name: "Linux",
-         *     percentage: 85
-         * }
-         */
     ]);
 
     return (
