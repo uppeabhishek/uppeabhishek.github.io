@@ -9,7 +9,7 @@ const AboutMe: FunctionComponent = () => (
         <div>
             I'm an enthusiastic <span className="stack-skill">Full-Stack Web Developer</span>,
             <span className="stack-skill"> Problem Solver </span>
-            and I'm huge fan of <span className="stack-skill">Java</span>,
+            and I'm huge fan of
             <span className="stack-skill"> Python </span>
             and
             <span className="stack-skill"> Javascript </span>

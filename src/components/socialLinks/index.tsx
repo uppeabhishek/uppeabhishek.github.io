@@ -1,29 +1,19 @@
-import React, { FunctionComponent, useRef } from "react";
+import React, {FunctionComponent, useRef} from "react";
 
-// // @ts-ignore
-// Import github from "../../static/github.svg";
 
 // @ts-ignore
 import githubOriginal from "../../static/github_original.svg";
 
-// // @ts-ignore
-// Import linkedin from "../../static/linkedin.svg";
 
 // @ts-ignore
 import linkedinOriginal from "../../static/linkedin_original.svg";
 
-// // @ts-ignore
-// Import twitter from "../../static/twitter.svg";
-
 // @ts-ignore
 import twitterOriginal from "../../static/twitter_original.svg";
 
-// // @ts-ignore
-// Import facebook from "../../static/facebook.svg";
-
 // @ts-ignore
 import facebookOriginal from "../../static/facebook_original.svg";
-import { Styles } from "./styles";
+import {Styles} from "./styles";
 
 const SocialLinks: FunctionComponent = () => {
     const width = useRef(30);
@@ -77,18 +67,6 @@ const SocialLinks: FunctionComponent = () => {
             dataName: "linkedin",
             href: "https://www.linkedin.com/in/uppeabhishek/",
             src: linkedinOriginal
-        },
-        // {
-        //     alt: "Twitter",
-        //     dataName: "twitter",
-        //     href: "https://twitter.com/uppeabhishek97/",
-        //     src: twitterOriginal
-        // },
-        {
-            alt: "Facebook",
-            dataName: "facebook",
-            href: "https://www.facebook.com/profile.php?id=100004402809442/",
-            src: facebookOriginal
         }
     ];
 

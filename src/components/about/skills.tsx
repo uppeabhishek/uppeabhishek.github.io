@@ -1,12 +1,8 @@
-import React, { FunctionComponent, useRef } from "react";
+import React, {FunctionComponent, useRef} from "react";
 import SkillBar from "./skillBar";
 
 const Skills: FunctionComponent = () => {
     const json = useRef([
-        {
-            name: "Java",
-            percentage: 90
-        },
         {
             name: "Python",
             percentage: 90
@@ -14,6 +10,10 @@ const Skills: FunctionComponent = () => {
         {
             name: "Javascript",
             percentage: 90
+        },
+        {
+            name: "Java",
+            percentage: 80
         },
         {
             name: "Typescript",
@@ -24,8 +24,12 @@ const Skills: FunctionComponent = () => {
             percentage: 80
         },
         {
+            name: "NodeJS",
+            percentage: 90
+        },
+        {
             name: "SpringBoot",
-            percentage: 85
+            percentage: 70
         },
         {
             name: "React",
@@ -37,6 +41,14 @@ const Skills: FunctionComponent = () => {
         },
         {
             name: "MySQL",
+            percentage: 80
+        },
+        {
+            name: "PostgreSQL",
+            percentage: 85
+        },
+        {
+            name: "DynamoDB",
             percentage: 85
         }
     ]);
@@ -46,7 +58,7 @@ const Skills: FunctionComponent = () => {
             <div className="title">SKILLS</div>
             <div>
                 {json.current.map((ele) => (
-                    <SkillBar key={ele.name} name={ele.name} percentage={ele.percentage} />
+                    <SkillBar key={ele.name} name={ele.name} percentage={ele.percentage}/>
                 ))}
             </div>
         </div>
