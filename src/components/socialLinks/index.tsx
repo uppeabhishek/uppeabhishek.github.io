@@ -12,7 +12,8 @@ import linkedinOriginal from "../../static/linkedin_original.svg";
 import twitterOriginal from "../../static/twitter_original.svg";
 
 // @ts-ignore
-import facebookOriginal from "../../static/facebook_original.svg";
+import leetcodeOriginal from "../../static/leetcode_original.png";
+
 import {Styles} from "./styles";
 
 const SocialLinks: FunctionComponent = () => {
@@ -67,6 +68,12 @@ const SocialLinks: FunctionComponent = () => {
             dataName: "linkedin",
             href: "https://www.linkedin.com/in/uppeabhishek/",
             src: linkedinOriginal
+        },
+        {
+            alt: "Leetcode",
+            dataName: "leetcode",
+            href: "https://leetcode.com/uppeabhishek/",
+            src: leetcodeOriginal
         }
     ];
 

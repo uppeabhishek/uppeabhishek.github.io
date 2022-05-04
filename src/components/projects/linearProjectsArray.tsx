@@ -43,7 +43,7 @@ export const projects = {
                         </ul>
                     </div>`,
             allImages: [dummyImage, dummyImage, dummyImage],
-            github: "https://github.com/uppeabhishek/pathfinding-visualizer/",
+            github: "https://github.com/uppeabhishek/CSCI6057-CODECLONEDETECTION/",
             type: "GRADUATE PROJECTS"
         },
         {
@@ -73,7 +73,7 @@ export const projects = {
                         </ul>
                     </div>`,
             allImages: [dummyImage, dummyImage, dummyImage],
-            github: "https://github.com/uppeabhishek/pathfinding-visualizer/",
+            github: "https://github.com/uppeabhishek/CSCI5409-DOCSMANAGER/",
             type: "GRADUATE PROJECTS"
         },
         {
@@ -103,7 +103,7 @@ export const projects = {
                         </ul>
                     </div>`,
             allImages: [dummyImage, dummyImage, dummyImage],
-            github: "https://github.com/uppeabhishek/pathfinding-visualizer/",
+            github: "https://github.com/uppeabhishek/CSCI5308-STOCKTRADING/",
             type: "GRADUATE PROJECTS"
         },
         {
@@ -151,7 +151,7 @@ export const projects = {
                         </ul>
                     </div>`,
             allImages: [dummyImage, dummyImage, dummyImage],
-            github: "https://github.com/uppeabhishek/pathfinding-visualizer/",
+            github: "https://github.com/uppeabhishek/CSCI5408-DATABASE/",
             type: "GRADUATE PROJECTS"
         }
     ],
