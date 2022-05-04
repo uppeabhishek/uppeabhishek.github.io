@@ -3,7 +3,7 @@ import { Styles } from "./styles";
 import LinearProjectsArray from "./linearProjectsArray";
 
 const Projects: FunctionComponent = () => {
-    const technologies = useRef(["ALL", "REACT", "PYTHON", "JAVASCRIPT"]);
+    const technologies = useRef(["ALL", "GRADUATE PROJECTS", "PERSONAL PROJECTS"]);
     const [selected, toggleSelected] = useState(technologies.current[0]);
 
     const handleClick = (e: KeyboardEvent, technology: string) => {
@@ -18,7 +18,6 @@ const Projects: FunctionComponent = () => {
             <div className="filters d-flex overflow-auto">
                 {technologies.current.map((technology: string) => {
                     const className = technology === selected ? "active" : "";
-
                     return (
                         <div
                             key={technology}

@@ -35,10 +35,10 @@ const Skills: FunctionComponent = () => {
             name: "React",
             percentage: 90
         },
-        {
-            name: "React Native",
-            percentage: 75
-        },
+        // {
+        //     name: "React Native",
+        //     percentage: 75
+        // },
         {
             name: "MySQL",
             percentage: 80
@@ -50,6 +50,14 @@ const Skills: FunctionComponent = () => {
         {
             name: "DynamoDB",
             percentage: 85
+        },
+        {
+            name: "AWS",
+            percentage: 80
+        },
+        {
+            name: "Docker",
+            percentage: 70
         }
     ]);
 
