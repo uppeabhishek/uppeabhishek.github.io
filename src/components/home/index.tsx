@@ -54,9 +54,7 @@ const Home: FunctionComponent = () => {
                 <img
                     alt="Abhishek Uppe"
                     className="profile-image"
-                    height={250}
                     src={profile}
-                    width={250}
                 />
                 <div className="name">Abhishek Uppe</div>
                 <div className="languages center-items flex-col">

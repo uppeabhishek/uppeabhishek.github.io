@@ -72,6 +72,8 @@ export const Styles = styled.div`
         img.profile-image {
             display: block;
             margin: auto;
+            height: 20rem;
+            width: 20rem;
             border-radius: 50%;
             justify-content: center;
             border: 5px solid grey;
