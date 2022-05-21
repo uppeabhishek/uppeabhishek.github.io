@@ -24,6 +24,10 @@ const Skills: FunctionComponent = () => {
             percentage: 80
         },
         {
+            name: "Flask",
+            percentage: 70
+        },
+        {
             name: "NodeJS",
             percentage: 90
         },
